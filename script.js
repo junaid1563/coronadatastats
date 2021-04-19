@@ -29,7 +29,7 @@ let getData = function () {
     .then((data) => {
       data.forEach((con) => {
         str += `<tr><td>${con.continent}</td><td>${con.cases}</td><td>${con.todayCases}</td><td>${con.deaths}</td><td>${con.todayDeaths}</td><td>${con.recovered}</td>
-      <td>${con.todayRecovered}</td><td>${con.active}</td>
+      <td>${con.todayRecovered}</td>
       </tr>`;
         totalCases += con.cases;
         newCases += con.todayCases;
@@ -85,7 +85,7 @@ let getCountryData = () => {
       countryTable.innerHTML = "";
       data.forEach((c) => {
         ctr += `<tr class=${c.country}><td>${c.country}</td><td>${c.cases}</td><td>${c.todayCases}</td><td>${c.deaths}</td><td>${c.todayDeaths}</td><td>${c.recovered}</td>
-      <td>${c.todayRecovered}</td><td>${c.active}</td>
+      <td>${c.todayRecovered}</td>
       
       </tr>`;
       });
@@ -127,7 +127,7 @@ search.addEventListener("input", (event) => {
         if (country.startsWith(input)) {
           ctr = "";
           ftr += `<tr class=${c.country}><td>${country}</td><td>${c.cases}</td><td>${c.todayCases}</td><td>${c.deaths}</td><td>${c.todayDeaths}</td><td>${c.recovered}</td>
-        <td>${c.todayRecovered}</td><td>${c.active}</td>
+        <td>${c.todayRecovered}</td>
 
         </tr>`;
         }

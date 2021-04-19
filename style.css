@@ -10,12 +10,12 @@ body {
   width: 100%;
 }
 .main {
-  width: 100vw;
+  width: 100%;
+  position: relative;
+  top: 7vh;
 }
 .main .content {
-  position: absolute;
-  top: 110%;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,25 +28,29 @@ body {
 .intro {
   background-image: linear-gradient(black, rgba(255, 255, 255, 0.9)),
     url("https://www.emeraldgrouppublishing.com/sites/default/files/image/covid-cells.jpg");
-  /* width: 100%; */
   color: white;
   padding-top: 2%;
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   flex-direction: column;
   margin: 0 auto;
-  /* background-repeat: cover; */
   background-position: center;
   height: 100%;
-  min-width: 100vw;
-  position: absolute;
-  top: 7%;
-  /* margin-bottom: 10%; */
+  min-width: 100%;
+  flex-basis: auto;
 }
 @media screen and (max-width: 1024px) {
-  .inrto {
-    min-width: 200vw;
+  .main .inrto {
+    height: 200vw;
+    padding-top: 5%;
+    text-align: center;
+  }
+  .main .content {
+    font-size: 1.7vw;
+    flex-wrap: wrap;
+  }
+  .main {
+    top: 8vh;
   }
 }
 .intro p {

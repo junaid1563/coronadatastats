@@ -40,7 +40,7 @@ let getData = function () {
         // console.log(con.cases);
       });
 
-      console.log(totalCases);
+      // console.log(totalCases);
       let a = {
         totalCases: totalCases,
         newCases: newCases,
@@ -53,7 +53,7 @@ let getData = function () {
       return a;
     })
     .then((b) => {
-      console.log(b);
+      // console.log(b);
       global.innerHTML = `<span class='big-text yellow'>Total Cases</span><br/>
       <span class='medium-text'>${b.totalCases}</span><br/>
       <span class='small-text'>+${b.newCases}</span>

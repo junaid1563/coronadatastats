@@ -72,50 +72,57 @@
 
             <div class="country" id="country-data">
                 <h1>Country Wise Stats</h1>
-                <label for="c-name" id="name">Search Country By Name</label>
-                <input type="text" name="c-name" id="country-name" placeholder="search a country..">
+                <div class="input">
+                    <label for="c-name" id="name">Search Country By Name</label>
+                    <input type="text" name="c-name" id="country-name" placeholder="search a country..">
+                </div>
                 <!-- <button class="btn btn-small btn-primary" id="cancel">Cancel</button> -->
-                <table class="table countries table-light table-striped table-bordered border-dark">
+                <div class="table-country">
+                    <table class="table countries table-light table-striped table-bordered border-dark">
 
-                    <thead class="table-dark">
-                        <tr>
-                            <th>Country</th>
-                            <th>Total Cases</th>
-                            <th>New Cases</th>
-                            <th>Total Deaths</th>
-                            <th>New Deaths</th>
-                            <th>Total Recovered</th>
-                            <th>New Recovered</th>
-                            <!-- <th>Active Cases</th> -->
-                        </tr>
-                    </thead>
-                    <tbody class="table-light" id="country-table">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Country</th>
+                                <th>Total Cases</th>
+                                <th>New Cases</th>
+                                <th>Active Cases</th>
+                                <th>Total Deaths</th>
+                                <th>New Deaths</th>
+                                <th>Total Recovered</th>
+                                <th>New Recovered</th>
+                                <!-- <th>Active Cases</th> -->
+                            </tr>
+                        </thead>
+                        <tbody class="table-light" id="country-table">
 
-                    </tbody>
+                        </tbody>
 
-                </table>
-
+                    </table>
+                </div>
             </div>
             <div class="continent" id="continent-data">
                 <h1>Continent Wise Stats</h1>
-                <table class="table continents table-light table-striped table-bordered border-dark">
-                    <thead class="table-dark">
-                        <tr>
-                            <th>Continent</th>
-                            <th>Total Cases</th>
-                            <th>New Cases</th>
-                            <th>Total Deaths</th>
-                            <th>New Deaths</th>
-                            <th>Total Recovered</th>
-                            <th>New Recovered</th>
-                            <!-- <th>Active Cases</th> -->
+                <div class="table-continent">
+                    <table class="table continents table-light table-striped table-bordered border-dark">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Continent</th>
+                                <th>Total Cases</th>
+                                <th>New Cases</th>
+                                <th>Active Cases</th>
+                                <th>Total Deaths</th>
+                                <th>New Deaths</th>
+                                <th>Total Recovered</th>
+                                <th>New Recovered</th>
+                                <!-- <th>Active Cases</th> -->
 
-                        </tr>
-                    </thead>
-                    <tbody id="con-table" class="table table-light ">
+                            </tr>
+                        </thead>
+                        <tbody id="con-table" class="table table-light ">
 
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </main>

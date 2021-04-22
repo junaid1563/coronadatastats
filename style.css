@@ -39,6 +39,12 @@ body {
   min-width: 100%;
   flex-basis: auto;
 }
+.date {
+  font-size: 1.5vw;
+  border: 1px solid white;
+  padding: 0.5em;
+  background-image: linear-gradient(black, rgba(194, 9, 9, 0.8));
+}
 @media screen and (max-width: 1024px) {
   .main .inrto {
     height: 200vw;
@@ -52,21 +58,44 @@ body {
   .main {
     top: 8vh;
   }
+  .date {
+    font-size: 3vw;
+  }
 }
+
 .intro p {
   width: 90%;
   text-align: left;
   line-height: 2;
 }
 #country-data {
-  width: 95%;
+  width: 97%;
+}
+.table-country {
+  height: 100vh;
+  width: 95vw;
+  overflow: scroll;
+  border-collapse: collapse;
+}
+.table-continent {
+  align-self: center;
+  border-collapse: collapse;
+  height: 45vh;
+  width: 95vw;
+  overflow: scroll;
+}
+.table thead tr th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 #country-data h1 {
   color: rgb(0, 0, 0);
   text-shadow: 1px 5px 2px white, 1px 3px 5px yellow;
 }
+
 #continent-data {
-  width: 95%;
+  width: 97%;
 }
 #continent-data h1 {
   color: black;
@@ -99,22 +128,6 @@ body {
 .small-text {
   font-size: 1.2rem;
 }
-.date {
-  font-size: 1.5rem;
-  border: 1px solid white;
-  padding: 0.5em;
-  background-image: linear-gradient(black, rgba(255, 255, 0, 0.8));
-}
-@media screen and (min-width: 1000px) {
-  #ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  #ul #drop {
-    align-self: flex-end;
-  }
-}
 
 #country-name {
   margin-left: 1%;
@@ -124,5 +137,27 @@ body {
 #name {
   margin-left: 30%;
   font-weight: 800;
-  text-shadow: 1px 1px 1px white;
+  text-shadow: 1px 1px 1px rgb(178, 243, 255), 2px 3px 3px white;
+}
+
+.input input {
+  width: 20vw;
+  height: 5vh;
+  font-size: 2vh;
+  text-align: center;
+}
+.input {
+  font-size: 1.5vw;
+}
+@media screen and (max-width: 1024px) {
+  .input input {
+    width: 30vw;
+    height: 3vh;
+    font-size: 1.5vh;
+    text-align: center;
+  }
+  .input {
+    font-size: 3vw;
+    margin-left: -25%;
+  }
 }

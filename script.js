@@ -28,7 +28,8 @@ let getData = function () {
     })
     .then((data) => {
       data.forEach((con) => {
-        str += `<tr><td>${con.continent}</td><td>${con.cases}</td><td>${con.todayCases}</td><td>${con.deaths}</td><td>${con.todayDeaths}</td><td>${con.recovered}</td>
+        let continent_name = String(con.continent).toUpperCase();
+        str += `<tr><td>${continent_name}</td><td>${con.cases}</td><td>${con.todayCases}</td><td>${con.active}</td><td>${con.deaths}</td><td>${con.todayDeaths}</td><td>${con.recovered}</td>
       <td>${con.todayRecovered}</td>
       </tr>`;
         totalCases += con.cases;
@@ -84,7 +85,10 @@ let getCountryData = () => {
     .then((data) => {
       countryTable.innerHTML = "";
       data.forEach((c) => {
-        ctr += `<tr class=${c.country}><td>${c.country}</td><td>${c.cases}</td><td>${c.todayCases}</td><td>${c.deaths}</td><td>${c.todayDeaths}</td><td>${c.recovered}</td>
+        let country = String(c.country).toUpperCase();
+        ctr += `<tr class=${c.country}><td>${country}</td><td>${c.cases}</td><td>${c.todayCases}</td>
+        </td><td>${c.active}</td>
+        <td>${c.deaths}</td><td>${c.todayDeaths}</td><td>${c.recovered}</td>
       <td>${c.todayRecovered}</td>
       
       </tr>`;
@@ -126,7 +130,9 @@ search.addEventListener("input", (event) => {
         let country = String(c.country).toUpperCase();
         if (country.startsWith(input)) {
           ctr = "";
-          ftr += `<tr class=${c.country}><td>${country}</td><td>${c.cases}</td><td>${c.todayCases}</td><td>${c.deaths}</td><td>${c.todayDeaths}</td><td>${c.recovered}</td>
+          ftr += `<tr class=${c.country}><td>${country}</td><td>${c.cases}</td><td>${c.todayCases}</td>
+          </td><td>${c.active}</td>
+          <td>${c.deaths}</td><td>${c.todayDeaths}</td><td>${c.recovered}</td>
         <td>${c.todayRecovered}</td>
 
         </tr>`;
